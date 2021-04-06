@@ -127,7 +127,7 @@ Wire Wire Line
 	8900 1700 8600 1950
 Wire Wire Line
 	8900 1800 8600 1650
-Text GLabel 8350 1150 0    50   Input ~ 0
+Text GLabel 7950 1150 0    50   Input ~ 0
 EN
 Text GLabel 7950 2550 0    50   Input ~ 0
 IO0
@@ -140,7 +140,7 @@ Wire Wire Line
 Wire Wire Line
 	9950 1750 10150 1750
 Wire Wire Line
-	8350 1150 8600 1150
+	7950 1150 8050 1150
 Wire Wire Line
 	8600 1150 8600 1250
 Wire Wire Line
@@ -790,8 +790,6 @@ Wire Wire Line
 	4750 4050 4950 4050
 Text Notes 7350 7500 0    50   ~ 0
 Sprinkler System Controller Board (ESP32)
-Text Notes 10600 7650 0    50   ~ 0
-1.0.0\n
 Text Notes 8150 7650 0    50   ~ 0
 2021-04-06
 NoConn ~ 6800 1500
@@ -857,8 +855,6 @@ Text GLabel 4250 2500 0    50   Input ~ 0
 STBY
 Text GLabel 4550 2400 0    50   Input ~ 0
 CHRG
-Text GLabel 7000 1700 2    50   Input ~ 0
-RX
 Wire Wire Line
 	6800 1700 7000 1700
 $Comp
@@ -936,8 +932,6 @@ Connection ~ 2750 6100
 Wire Wire Line
 	2750 6100 2900 6100
 Wire Wire Line
-	2650 4450 2750 4450
-Wire Wire Line
 	4050 4450 4050 5200
 Wire Wire Line
 	4050 5200 4400 5200
@@ -947,8 +941,6 @@ Wire Wire Line
 Wire Wire Line
 	2750 4350 2750 4450
 Connection ~ 2750 4450
-Wire Wire Line
-	2750 4450 4050 4450
 Wire Wire Line
 	2050 6100 2750 6100
 Wire Wire Line
@@ -1123,8 +1115,121 @@ Wire Wire Line
 Connection ~ 800  4350
 Wire Wire Line
 	800  4350 800  4450
-Wire Wire Line
-	7950 2550 8600 2550
+Text Notes 10600 7650 0    50   ~ 0
+1.0.1
 Text GLabel 6850 1800 2    50   Input ~ 0
+RX
+Text GLabel 7000 1700 2    50   Input ~ 0
 TX
+$Comp
+L Device:R R18
+U 1 1 606B8BF0
+P 8050 850
+F 0 "R18" V 7843 850 50  0000 C CNN
+F 1 "10k" V 7934 850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 7980 850 50  0001 C CNN
+F 3 "~" H 8050 850 50  0001 C CNN
+	1    8050 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0109
+U 1 1 606D7C17
+P 8050 700
+F 0 "#PWR0109" H 8050 550 50  0001 C CNN
+F 1 "+3.3V" H 8065 873 50  0000 C CNN
+F 2 "" H 8050 700 50  0001 C CNN
+F 3 "" H 8050 700 50  0001 C CNN
+	1    8050 700 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0110
+U 1 1 60726C87
+P 8050 2100
+F 0 "#PWR0110" H 8050 1950 50  0001 C CNN
+F 1 "+3.3V" H 8065 2273 50  0000 C CNN
+F 2 "" H 8050 2100 50  0001 C CNN
+F 3 "" H 8050 2100 50  0001 C CNN
+	1    8050 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R17
+U 1 1 60726C80
+P 8050 2250
+F 0 "R17" V 7843 2250 50  0000 C CNN
+F 1 "10k" V 7934 2250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 7980 2250 50  0001 C CNN
+F 3 "~" H 8050 2250 50  0001 C CNN
+	1    8050 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 2550 8600 2550
+Wire Wire Line
+	7950 2550 8050 2550
+Connection ~ 8050 2550
+Wire Wire Line
+	8050 2350 8050 2400
+$Comp
+L Device:C C7
+U 1 1 6072C4CA
+P 8050 2750
+F 0 "C7" H 7936 2796 50  0000 R CNN
+F 1 "0.1uF" H 7936 2705 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 8088 2600 50  0001 C CNN
+F 3 "~" H 8050 2750 50  0001 C CNN
+	1    8050 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0113
+U 1 1 607982DE
+P 8050 2900
+F 0 "#PWR0113" H 8050 2650 50  0001 C CNN
+F 1 "GND" H 8055 2727 50  0000 C CNN
+F 2 "" H 8050 2900 50  0001 C CNN
+F 3 "" H 8050 2900 50  0001 C CNN
+	1    8050 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 2550 8050 2600
+$Comp
+L Device:C C6
+U 1 1 608072F7
+P 8050 1400
+F 0 "C6" H 7936 1446 50  0000 R CNN
+F 1 "0.1uF" H 7936 1355 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 8088 1250 50  0001 C CNN
+F 3 "~" H 8050 1400 50  0001 C CNN
+	1    8050 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0114
+U 1 1 608072FD
+P 8050 1550
+F 0 "#PWR0114" H 8050 1300 50  0001 C CNN
+F 1 "GND" H 8055 1377 50  0000 C CNN
+F 2 "" H 8050 1550 50  0001 C CNN
+F 3 "" H 8050 1550 50  0001 C CNN
+	1    8050 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 1000 8050 1150
+Connection ~ 8050 1150
+Wire Wire Line
+	8050 1150 8600 1150
+Wire Wire Line
+	8050 1150 8050 1250
+Connection ~ 8050 2400
+Wire Wire Line
+	8050 2400 8050 2550
+Wire Wire Line
+	2650 4450 2750 4450
+Wire Wire Line
+	2750 4450 4050 4450
 $EndSCHEMATC
