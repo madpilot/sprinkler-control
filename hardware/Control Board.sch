@@ -790,8 +790,6 @@ Wire Wire Line
 	4750 4050 4950 4050
 Text Notes 7350 7500 0    50   ~ 0
 Sprinkler System Controller Board (ESP32)
-Text Notes 10600 7650 0    50   ~ 0
-1.0.0\n
 Text Notes 8150 7650 0    50   ~ 0
 2021-04-06
 NoConn ~ 6800 1500
@@ -857,8 +855,6 @@ Text GLabel 4250 2500 0    50   Input ~ 0
 STBY
 Text GLabel 4550 2400 0    50   Input ~ 0
 CHRG
-Text GLabel 7000 1700 2    50   Input ~ 0
-RX
 Wire Wire Line
 	6800 1700 7000 1700
 $Comp
@@ -1123,8 +1119,64 @@ Wire Wire Line
 Connection ~ 800  4350
 Wire Wire Line
 	800  4350 800  4450
-Wire Wire Line
-	7950 2550 8600 2550
+Text Notes 10600 7650 0    50   ~ 0
+1.0.1
 Text GLabel 6850 1800 2    50   Input ~ 0
+RX
+Text GLabel 7000 1700 2    50   Input ~ 0
 TX
+Connection ~ 8600 1150
+Wire Wire Line
+	8600 1100 8600 1150
+$Comp
+L Device:R R18
+U 1 1 606B8BF0
+P 8600 950
+F 0 "R18" V 8393 950 50  0000 C CNN
+F 1 "10k" V 8484 950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 8530 950 50  0001 C CNN
+F 3 "~" H 8600 950 50  0001 C CNN
+	1    8600 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0109
+U 1 1 606D7C17
+P 8600 800
+F 0 "#PWR0109" H 8600 650 50  0001 C CNN
+F 1 "+3.3V" H 8615 973 50  0000 C CNN
+F 2 "" H 8600 800 50  0001 C CNN
+F 3 "" H 8600 800 50  0001 C CNN
+	1    8600 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0110
+U 1 1 60726C87
+P 8050 2050
+F 0 "#PWR0110" H 8050 1900 50  0001 C CNN
+F 1 "+3.3V" H 8065 2223 50  0000 C CNN
+F 2 "" H 8050 2050 50  0001 C CNN
+F 3 "" H 8050 2050 50  0001 C CNN
+	1    8050 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R17
+U 1 1 60726C80
+P 8050 2200
+F 0 "R17" V 7843 2200 50  0000 C CNN
+F 1 "10k" V 7934 2200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 7980 2200 50  0001 C CNN
+F 3 "~" H 8050 2200 50  0001 C CNN
+	1    8050 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 2550 8600 2550
+Wire Wire Line
+	7950 2550 8050 2550
+Connection ~ 8050 2550
+Wire Wire Line
+	8050 2350 8050 2550
 $EndSCHEMATC
